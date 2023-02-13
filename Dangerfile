@@ -18,7 +18,7 @@ end
 has_app_changes = !git.modified_files.grep(/lib/).empty?
 if !git.modified_files.include?('CHANGELOG.md') && has_app_changes
   warn("Please include a CHANGELOG entry to credit yourself! \nYou can find it at [CHANGELOG.md](https://github.com/CocoaPods/CocoaPods/blob/master/CHANGELOG.md).", :sticky => false)
-  markdown <<-MARKDOWN
+   <<-MARKDOWN
 Here's an example of your CHANGELOG entry:
 
 ```markdown
@@ -29,4 +29,4 @@ Here's an example of your CHANGELOG entry:
 
 *note*: There are two invisible spaces after the entry's text.
 MARKDOWN
-end
+  end
